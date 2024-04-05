@@ -1,0 +1,303 @@
+$primarycolor : #0c0e0c;
+$secondarycolor : #eaebea;
+$tertiarycolor : #d8323c;
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,700;1,700&display=swap');
+$width: 768px;
+
+@mixin mobile {
+    @media (max-width: #{$width}){
+        @content
+    }
+}
+
+.quiz-header {
+    top:50px !important;
+    @include mobile {
+        top:30px !important;
+        // margin-top: 130px;
+    }
+}
+
+@import '../../global.scss';
+
+.Vocabulary {
+    overflow: hidden;
+    height: 100vh;
+    position: relative;
+    background-color: #ff4e00;
+    background-image: linear-gradient(227deg, #ff4e00 0%, #ec9f05 74%);
+    // padding-top: 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .wave {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100px;
+        background: url('../../assets/images/wave.png');
+        background-size: 1000px 100px;
+    }
+
+    .wave1 {
+        animation: wave 30s linear infinite;
+        z-index: 1000;
+        opacity: 1;
+        animation-delay: 0s;
+        bottom: 0;
+    }
+
+    .wave2 {
+        animation: wave2 15s linear infinite;
+        z-index: 999;
+        opacity: 0.5;
+        animation-delay: -5s;
+        bottom: 10px;
+    }
+
+    .wave3 {
+        animation: wave1 10s linear infinite;
+        z-index: 998;
+        opacity: 0.2;
+        animation-delay: -2s;
+        bottom: 15px;
+    }
+
+    .wave4 {
+        animation: wave2 25s linear infinite;
+        z-index: 997;
+        opacity: 0.7;
+        animation-delay: -5s;
+        bottom: 20px;
+    }
+
+    .arrow {
+        height: 8vh;
+        position: absolute;
+        top: 50%;
+        cursor: pointer;
+        @include mobile {
+            display: none;
+        }
+        &.left {
+            left: 100px;
+            transform: rotateY(180deg);
+            animation: arrowBlink 2s infinite;
+            animation-delay: 5s;
+            @include mobile {
+                    left: 10px;
+            }
+        }
+
+        &.right {
+            right: 100px;
+            animation: arrowBlink 2s infinite;
+            @include mobile {
+             right: 10px;       
+            }
+        }
+    }
+
+    .sun {
+        position: absolute;
+        display: inline-block;  
+        bottom: -150px;
+        width: 400px;
+        height: 400px;
+        background: orange;
+        box-shadow: 0 0 10px orange,
+            0 0 60px orange,
+            0 0 200px yellow,
+            inset 0 0 80px yellow;
+        border-radius: 50%;
+        animation: sun 1s linear;
+    }
+
+    .heading {
+        // position: absolute;
+        width: 400px;
+        // left: calc(50% - 200px);
+        // top: 15vh;
+
+        h1 {
+            color: #fff;
+            font-family: 'Hey comic';
+            text-align: center;
+        }
+    }
+
+    .flex {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        // align-items: center;
+        justify-content: center;
+        .slider {
+            height: 350px;
+            display: flex;
+            // top: 30vh;
+            // position: absolute;
+            left: 0;
+            transition: all 1s ease-out;
+            margin-bottom: 2rem;
+
+            .vocab-container {
+                min-width: 100vw;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                
+
+                .item {
+                    width: 700px;
+                    // height: 100%;
+                    padding: 1rem 3rem;
+                    background-color: white;
+                    color: black;
+                    border-radius: 20px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                    @include mobile {
+                        width: 80%;
+                    }
+                    .day {
+                        font-size: 2rem;
+                        font-family: 'Hey comic';
+                    }
+
+                    .wm {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 100%;
+                        flex-direction: column;
+                        .word {
+                            margin: 0.5rem;
+
+                            h1 {
+                                font-size: 2.5rem;
+                                font-family: 'Hey comic';
+                            }
+                        }
+
+                        .meaning {
+                            padding: 1rem;
+
+                            p {
+                                font-family: 'Righteous';
+                                font-size: 1.3rem;
+                            }
+                        }
+                    }
+
+                    .type {
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        h2 {
+                            font-family: 'Hey comic';
+                        }
+                    }
+
+                    .sentence {
+                        font-family: 'Righteous';
+                        font-size: 1.5rem;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+
+        .fg {
+
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px 0;
+            // position: abpxsolute;
+            // bottom: 10vh;
+            @include mobile {
+                // bottom: 10px;
+                
+            }
+            a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .games {
+                font-weight: 400;
+                width: 400px;
+                left: calc(50% - 200px);
+                background-color: rgba(255, 255, 255, 0.06);
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                border-radius: 15px;
+                padding: 1rem;
+                backdrop-filter: blur(30px);
+                box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
+               @include mobile {
+                    width: 80%;
+                }
+                h1 {
+                    color: #fff;
+                }
+                
+                &:hover {
+                    background-color: rgba(255, 255, 255, 0.2);
+                }
+            }
+        }
+    }
+}
+
+@keyframes wave {
+    0% {
+        background-position-x: 0;
+    }
+
+    100% {
+        background-position-x: 60vw;
+    }
+}
+
+@keyframes wave2 {
+    0% {
+        background-position-x: 0;
+    }
+
+    100% {
+        background-position-x: -60vw;
+    }
+
+
+}
+
+@keyframes arrowBlink {
+    50% {
+        opacity: 40%;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+}
+
+@keyframes sun {
+    0% {
+        bottom: -150px;
+    }
+    100% {
+        bottom: 200px;
+    }
+
+}
