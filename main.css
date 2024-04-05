@@ -3614,13 +3614,7 @@
     flex-direction: column
 }
 
-.scoreboard .container {
-    background-image: url(/static/media/scoreboard.fdfd8bd33c92713d3d28.jpg);
-    border-radius: 20px;
-    box-shadow: 0 15px 60px rgba(0,0,0,.5);
-    justify-content: space-between;
-    width: 96vw
-}
+
 
 .scoreboard .container .heading {
     color: #000;
@@ -5133,17 +5127,7 @@ body #info {
     color: #fff
 }
 
-.CompPlaying {
-    align-items: center;
-    background: linear-gradient(35deg,rgba(255,77,0,.75),rgba(236,159,5,.7) 74%),url(/static/media/background1.cd6e8f391033e86cd5d6.png);
-    background-color: #fa0;
-    background-size: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    min-height: 100vh;
-    overflow: hidden
-}
+
 
 .CompPlaying .timer {
     align-items: center;
@@ -26398,40 +26382,17 @@ a {
     width: auto
 }
 
-@font-face {
-    font-display: auto;
-    font-family: Font Awesome\ 5 Brands;
-    font-style: normal;
-    font-weight: 400;
-    src: url(/static/media/fa-brands-400.5c97ac97573e1198ec89.eot);
-    src: url(/static/media/fa-brands-400.5c97ac97573e1198ec89.eot?#iefix) format("embedded-opentype"),url(/static/media/fa-brands-400.c5fb524739123733372f.woff2) format("woff2"),url(/static/media/fa-brands-400.f323920420dd345f3887.woff) format("woff"),url(/static/media/fa-brands-400.c521b81978c927cd92ed.ttf) format("truetype")
-}
 
 .fab {
     font-family: Font Awesome\ 5 Brands
 }
 
-@font-face {
-    font-display: auto;
-    font-family: Font Awesome\ 5 Pro;
-    font-style: normal;
-    font-weight: 300;
-    src: url(/static/media/fa-light-300.3c69f3ae55ca77a02ca2.eot);
-    src: url(/static/media/fa-light-300.3c69f3ae55ca77a02ca2.eot?#iefix) format("embedded-opentype"),url(/static/media/fa-light-300.9c312fbfce1d73c12ef5.woff2) format("woff2"),url(/static/media/fa-light-300.49f690d93f681a892fee.woff) format("woff"),url(/static/media/fa-light-300.95914d2bc87525607e38.ttf) format("truetype")
-}
 
 .fal {
     font-weight: 300
 }
 
-@font-face {
-    font-display: auto;
-    font-family: Font Awesome\ 5 Pro;
-    font-style: normal;
-    font-weight: 400;
-    src: url(/static/media/fa-regular-400.09e373032249ccf74acc.eot);
-    src: url(/static/media/fa-regular-400.09e373032249ccf74acc.eot?#iefix) format("embedded-opentype"),url(/static/media/fa-regular-400.865872d76dd7708aae30.woff2) format("woff2"),url(/static/media/fa-regular-400.bc7401a8b6f3ad218e81.woff) format("woff"),url(/static/media/fa-regular-400.933706120e696c40ccc5.ttf) format("truetype")
-}
+
 
 .fal,.far {
     font-family: Font Awesome\ 5 Pro
@@ -26441,14 +26402,7 @@ a {
     font-weight: 400
 }
 
-@font-face {
-    font-display: auto;
-    font-family: Font Awesome\ 5 Pro;
-    font-style: normal;
-    font-weight: 900;
-    src: url(/static/media/fa-solid-900.aa43d949e3d88821b136.eot);
-    src: url(/static/media/fa-solid-900.aa43d949e3d88821b136.eot?#iefix) format("embedded-opentype"),url(/static/media/fa-solid-900.e182c9675a68494073bc.woff2) format("woff2"),url(/static/media/fa-solid-900.d201bbc04967d816d5b3.woff) format("woff"),url(/static/media/fa-solid-900.cce226a3f3dc96519752.ttf) format("truetype")
-}
+
 
 .fa,.fas {
     font-family: Font Awesome\ 5 Pro;
@@ -29322,13 +29276,7 @@ p {
     opacity: .8
 }
 
-.service-area {
-    background: #eef1f6;
-    background-image: url(/static/media/tile_background.dcd21395ed3743a213e8.png);
-    background-repeat: no-repeat;
-    background-size: auto;
-    position: relative
-}
+
 
 .feature-title {
     background-color: #234e70;

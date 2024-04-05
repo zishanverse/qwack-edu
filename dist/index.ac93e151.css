@@ -1,0 +1,289 @@
+@import "https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,700;1,700&display=swap";
+.quiz-header {
+  top: 50px !important;
+}
+
+@media (width <= 768px) {
+  .quiz-header {
+    top: 30px !important;
+  }
+}
+
+.Vocabulary {
+  background-color: #ff4e00;
+  background-image: linear-gradient(227deg, #ff4e00 0%, #ec9f05 74%);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.Vocabulary .wave {
+  background-size: 1000px 100px;
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.Vocabulary .wave1 {
+  z-index: 1000;
+  opacity: 1;
+  animation: 30s linear infinite wave;
+  bottom: 0;
+}
+
+.Vocabulary .wave2 {
+  z-index: 999;
+  opacity: .5;
+  animation: 15s linear -5s infinite wave2;
+  bottom: 10px;
+}
+
+.Vocabulary .wave3 {
+  z-index: 998;
+  opacity: .2;
+  animation: 10s linear -2s infinite wave1;
+  bottom: 15px;
+}
+
+.Vocabulary .wave4 {
+  z-index: 997;
+  opacity: .7;
+  animation: 25s linear -5s infinite wave2;
+  bottom: 20px;
+}
+
+.Vocabulary .arrow {
+  cursor: pointer;
+  height: 8vh;
+  position: absolute;
+  top: 50%;
+}
+
+@media (width <= 768px) {
+  .Vocabulary .arrow {
+    display: none;
+  }
+}
+
+.Vocabulary .arrow.left {
+  animation: 2s 5s infinite arrowBlink;
+  left: 100px;
+  transform: rotateY(180deg);
+}
+
+@media (width <= 768px) {
+  .Vocabulary .arrow.left {
+    left: 10px;
+  }
+}
+
+.Vocabulary .arrow.right {
+  animation: 2s infinite arrowBlink;
+  right: 100px;
+}
+
+@media (width <= 768px) {
+  .Vocabulary .arrow.right {
+    right: 10px;
+  }
+}
+
+.Vocabulary .sun {
+  background: orange;
+  border-radius: 50%;
+  width: 400px;
+  height: 400px;
+  animation: 1s linear sun;
+  display: inline-block;
+  position: absolute;
+  bottom: -150px;
+  box-shadow: 0 0 10px orange, 0 0 60px orange, 0 0 200px #ff0, inset 0 0 80px #ff0;
+}
+
+.Vocabulary .heading {
+  width: 400px;
+}
+
+.Vocabulary .heading h1 {
+  color: #fff;
+  text-align: center;
+  font-family: Hey comic;
+}
+
+.Vocabulary .flex {
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: relative;
+}
+
+.Vocabulary .flex .slider {
+  height: 350px;
+  margin-bottom: 2rem;
+  transition: all 1s ease-out;
+  display: flex;
+  left: 0;
+}
+
+.Vocabulary .flex .slider .vocab-container {
+  justify-content: center;
+  align-items: center;
+  min-width: 100vw;
+  display: flex;
+}
+
+.Vocabulary .flex .slider .vocab-container .item {
+  color: #000;
+  background-color: #fff;
+  border-radius: 20px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 700px;
+  padding: 1rem 3rem;
+  display: flex;
+}
+
+@media (width <= 768px) {
+  .Vocabulary .flex .slider .vocab-container .item {
+    width: 80%;
+  }
+}
+
+.Vocabulary .flex .slider .vocab-container .item .day {
+  font-family: Hey comic;
+  font-size: 2rem;
+}
+
+.Vocabulary .flex .slider .vocab-container .item .wm {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  display: flex;
+}
+
+.Vocabulary .flex .slider .vocab-container .item .wm .word {
+  margin: .5rem;
+}
+
+.Vocabulary .flex .slider .vocab-container .item .wm .word h1 {
+  font-family: Hey comic;
+  font-size: 2.5rem;
+}
+
+.Vocabulary .flex .slider .vocab-container .item .wm .meaning {
+  padding: 1rem;
+}
+
+.Vocabulary .flex .slider .vocab-container .item .wm .meaning p {
+  font-family: Righteous;
+  font-size: 1.3rem;
+}
+
+.Vocabulary .flex .slider .vocab-container .item .type {
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  display: flex;
+}
+
+.Vocabulary .flex .slider .vocab-container .item .type h2 {
+  font-family: Hey comic;
+}
+
+.Vocabulary .flex .slider .vocab-container .item .sentence {
+  text-align: center;
+  font-family: Righteous;
+  font-size: 1.5rem;
+}
+
+.Vocabulary .flex .fg {
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 20px 0;
+  display: flex;
+}
+
+.Vocabulary .flex .fg a {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.Vocabulary .flex .fg .games {
+  backdrop-filter: blur(30px);
+  background-color: #ffffff0f;
+  border: 1px solid #ffffff1a;
+  border-radius: 15px;
+  width: 400px;
+  padding: 1rem;
+  font-weight: 400;
+  left: calc(50% - 200px);
+  box-shadow: 0 0 1rem #0003;
+}
+
+@media (width <= 768px) {
+  .Vocabulary .flex .fg .games {
+    width: 80%;
+  }
+}
+
+.Vocabulary .flex .fg .games h1 {
+  color: #fff;
+}
+
+.Vocabulary .flex .fg .games:hover {
+  background-color: #fff3;
+}
+
+@keyframes wave {
+  0% {
+    background-position-x: 0;
+  }
+
+  100% {
+    background-position-x: 60vw;
+  }
+}
+
+@keyframes wave2 {
+  0% {
+    background-position-x: 0;
+  }
+
+  100% {
+    background-position-x: -60vw;
+  }
+}
+
+@keyframes arrowBlink {
+  50% {
+    opacity: .4;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes sun {
+  0% {
+    bottom: -150px;
+  }
+
+  100% {
+    background-color: #e4b351;
+    bottom: 200px;
+  }
+}
+/*# sourceMappingURL=index.ac93e151.css.map */
